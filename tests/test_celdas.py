@@ -38,3 +38,14 @@ def test_columna_carton():
         if (ct == 0):
             res = False
     assert res == True
+
+def test_fila_carton():
+    mi_carton = carton()
+    res = True
+    for fila in mi_carton:
+        ct = 0
+        for celda in fila:
+            ct = ct + celda
+        if (ct == 0):
+            res = False
+    assert res == True
