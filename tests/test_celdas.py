@@ -1,10 +1,10 @@
+from src.bingo import carton
 
-from src.bingo import sumar
-from src.bingo import restar
-
-def test_sumar():
-    assert sumar(1,2) == 3
-    assert sumar(1,10) == 11
-
-def test_restar():
-    assert restar(3,1) == 2
+def test_contar_celdas_ocupadas():
+    mi_carton = carton()
+    contador = 0
+    for fila in mi_carton:
+        for celda in fila:
+            contador = contador + celda
+    
+    assert contador == 15 
