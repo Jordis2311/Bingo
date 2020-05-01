@@ -1,6 +1,7 @@
 from src.bingo import carton
 from src.bingo import columna
 
+#Revisar si el carton tiene 15 celdas ocupadas
 def test_celdas_15():
     mi_carton = carton()
     contador = 0
@@ -10,6 +11,7 @@ def test_celdas_15():
     
     assert contador == 15
 
+#Revisar si el carton tiene maximo 15 celdas ocupadas
 def test_celdas_no_mayor_15():
     mi_carton = carton()
     contador = 0
@@ -19,6 +21,7 @@ def test_celdas_no_mayor_15():
     
     assert contador <= 15
 
+#Revisar si el carton tiene minimo 15 celdas ocupadas
 def test_celdas_no_menor_15():
     mi_carton = carton()
     contador = 0
@@ -28,6 +31,7 @@ def test_celdas_no_menor_15():
     
     assert contador >= 15 
 
+#Revisa si cada columna tiene al menos 1 celda ocupada
 def test_columna_carton():
     mi_carton = carton()
     res = True
@@ -39,6 +43,7 @@ def test_columna_carton():
             res = False
     assert res == True
 
+#Revias si cada fila tiene al menos 1 celda ocupada
 def test_fila_carton():
     mi_carton = carton()
     res = True
