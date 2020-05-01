@@ -1,15 +1,12 @@
 from src.bingo import carton
 from src.bingo import columna
+from src.bingo import validar_quince_celdas
+
 
 #Revisar si el carton tiene 15 celdas ocupadas
 def test_celdas_15():
     mi_carton = carton()
-    contador = 0
-    for fila in mi_carton:
-        for celda in fila:
-            contador = contador + celda
-    
-    assert contador == 15
+    assert validar_quince_celdas(mi_carton) == True
 
 #Revisar si el carton tiene maximo 15 celdas ocupadas
 def test_celdas_no_mayor_15():
