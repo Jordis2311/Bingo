@@ -57,7 +57,7 @@ def todas_columnas_con_numeros(carton):
             res = False
     return res == True
 
-#Revias si cada fila tiene al menos 1 celda ocupada
+#Revisa si cada fila tiene al menos 1 celda ocupada
 def todas_filas_con_numeros(carton):
     res = True
     for fila in carton:
@@ -65,5 +65,16 @@ def todas_filas_con_numeros(carton):
         for celda in fila:
             ct = ct + celda
         if (ct == 0):
+            res = False
+    return res == True
+
+#Revisar si en una columna los numeros menores estan por encima de los mayores
+def incremento_columna(carton):
+    res = True
+    for i in range (0,9):
+        (celda1,celda2,celda3) = columna(carton,i)
+        if (celda1 > celda2 & celda2 != 0) or (celda1 > celda3 and celda3 != 0):
+            res = False
+        if (celda2 > celda3 &celda3 != 0):
             res = False
     return res == True
