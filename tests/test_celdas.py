@@ -6,6 +6,7 @@ from src.bingo import validar_no_menor_quince
 from src.bingo import todas_columnas_con_numeros
 from src.bingo import todas_filas_con_numeros
 from src.bingo import incremento_columna
+from src.bingo import incremento_fila
 
 #Revisar si la funcion que valida que el carton tiene 15 celdas ocupadas funciona correctamente
 def test_celdas_15():
@@ -53,10 +54,19 @@ def test_fila_carton():
     assert todas_filas_con_numeros(mi_carton) == True
 
 #Revisa si la funcion incremento columna funciona correctamente
-def test_incremento():
+def test_incremento_columnas():
     mi_carton = (
     (1,11,0,31,0,0,61,0,81),
     (0,0,22,0,42,52,62,72,0),
     (3,13,0,33,43,0,0,0,83)
     )
     assert incremento_columna(mi_carton) == True
+
+#Revisa si la funcion incremento filas funciona correctamente
+def test_incremento_filas():
+    mi_carton = (
+    (1,11,0,31,0,0,61,0,81),
+    (0,0,22,0,42,52,62,72,0),
+    (3,13,0,33,43,0,0,0,83)
+    )
+    assert incremento_fila(mi_carton) == True
