@@ -89,3 +89,14 @@ def incremento_fila(carton):
                 if (fila[i] > fila[x] and fila[x] != 0 and fila[i] != 0):
                     res = False
     return res == True 
+
+#Revisa si el carton no tiene elementos repetidos
+def no_repite_elementos(carton):
+    numeros = []
+    res = True
+    for fila in carton:
+        for celda in fila:
+            numeros.append(celda)
+            if (numeros.count(celda) > 1 and celda != 0):
+                res = False
+    return res == True
