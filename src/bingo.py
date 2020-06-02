@@ -107,3 +107,15 @@ def no_repite_elementos(carton):
             if (numeros.count(celda) > 1 and celda != 0):
                 res = False
     return res == True
+
+#Verifica que haya 5 celdas ocupadas por fila
+def cinco_celdas_por_fila(carton):
+    res = True
+    for fila in carton:
+        cant = 0
+        for celda in fila:
+            if (celda != 0):
+                cant += 1
+        if(cant != 5):
+            res = False
+    return res == True

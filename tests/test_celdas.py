@@ -9,6 +9,7 @@ from src.bingo import incremento_columna
 from src.bingo import incremento_fila
 from src.bingo import no_repite_elementos
 from src.bingo import columnas_no_completas
+from src.bingo import cinco_celdas_por_fila
 
 #Revisar si la funcion que valida que el carton tiene 15 celdas ocupadas funciona correctamente
 def test_celdas_15():
@@ -91,3 +92,12 @@ def test_repite_elemento():
     (3,13,0,33,43,0,0,0,83)
     )
     assert no_repite_elementos(mi_carton) == True
+
+#Verifica que la funcion cinco celdas por fila esta bien
+def test_cinco_fila():
+    mi_carton = (
+    (1,1,0,1,0,0,1,0,1),
+    (0,0,1,0,1,1,1,1,0),
+    (1,1,0,1,1,0,0,0,1)
+    )
+    assert cinco_celdas_por_fila(mi_carton) == True
