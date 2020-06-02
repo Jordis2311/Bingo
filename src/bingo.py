@@ -50,10 +50,17 @@ def validar_no_menor_quince(carton):
 def todas_columnas_con_numeros(carton):
     res = True
     for i in range (0,9):
-        ct = 0
-        (celda1,celda2,celda3) = columna(carton,i)
-        ct = ct + celda1 + celda2 + celda3
-        if (ct == 0):
+        (c1,c2,c3) = columna(carton,i)
+        if(c1 == 0 and c2 == 0 and c3 == 0):
+            res = False
+    return res == True
+
+#Revisa que una columna no tenga las 3 celdas ocupadas
+def columnas_no_completas(carton):
+    res = True
+    for i in range (0,9):
+        (c1,c2,c3) = columna(carton,i)
+        if(c1 != 0 and c2 != 0 and c3 != 0):
             res = False
     return res == True
 

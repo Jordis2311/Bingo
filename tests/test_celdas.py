@@ -8,6 +8,7 @@ from src.bingo import todas_filas_con_numeros
 from src.bingo import incremento_columna
 from src.bingo import incremento_fila
 from src.bingo import no_repite_elementos
+from src.bingo import columnas_no_completas
 
 #Revisar si la funcion que valida que el carton tiene 15 celdas ocupadas funciona correctamente
 def test_celdas_15():
@@ -44,6 +45,16 @@ def test_columna_carton():
      (0,1,1,1,1,0,0,1,1)
     )
     assert todas_columnas_con_numeros(mi_carton) == True
+
+#Revisa si la funcion que revisa que las celdas de un bingo no esten completas funciona correctamente
+def test_celda_completa():
+    mi_carton = (
+     (1,0,1,1,0,1,0,1,0),
+     (1,0,0,0,0,1,1,0,1),
+     (0,1,1,1,1,0,0,1,1)
+    )
+    assert columnas_no_completas(mi_carton) == True
+
 
 #Revisa si la funcion que valida que cada fila tiene al menos 1 celda ocupada funciona correctamente
 def test_fila_carton():
