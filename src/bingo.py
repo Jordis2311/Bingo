@@ -119,3 +119,18 @@ def cinco_celdas_por_fila(carton):
         if(cant != 5):
             res = False
     return res == True
+
+
+#Verifica que el carton no tenga mas de 2 celdas ocupadas seguidas
+def dos_celdas_ocupadas(carton):
+    res = True
+    for fila in carton:
+        cc = 0
+        for celda in fila:
+            if (celda != 0):
+                cc +=1
+            else:
+                cc = 0
+            if (cc > 2):
+                res = False
+    return res == True
