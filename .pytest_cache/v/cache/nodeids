@@ -1,0 +1,19 @@
+[
+  "tests/test_celdas.py::test_contar_celdas_ocupadas",
+  "tests/test_celdas.py::test_celdas_no_mayor_15",
+  "tests/test_celdas.py::test_celdas_no_menor_15",
+  "tests/test_celdas.py::test_celda_por_columna",
+  "tests/test_celdas.py::test_celdas_por_columna",
+  "tests/test_celdas.py::test_columna_carton",
+  "tests/test_celdas.py::test_celdas_15",
+  "tests/test_celdas.py::test_fila_carton",
+  "tests/test_1_a_90.py::test_unoanoventa",
+  "tests/test_celdas.py::test_incremento",
+  "tests/test_celdas.py::test_incremento_columnas",
+  "tests/test_celdas.py::test_incremento_filas",
+  "tests/test_celdas.py::test_repite_elemento",
+  "tests/test_celdas.py::test_celda_completa",
+  "tests/test_celdas.py::test_cinco_fila",
+  "tests/test_celdas.py::test_celdas_ocupadas_seguidas",
+  "tests/test_celdas.py::test_celdas_vacias_seguidas"
+]

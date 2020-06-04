@@ -135,7 +135,7 @@ def dos_celdas_ocupadas(carton):
                 res = False
     return res == True
 
-    #Verifica que el carton no tenga mas de 2 celdas vacias seguidas
+#Verifica que el carton no tenga mas de 2 celdas vacias seguidas
 def dos_celdas_vacias(carton):
     res = True
     for fila in carton:
@@ -148,3 +148,16 @@ def dos_celdas_vacias(carton):
             if (cc > 2):
                 res = False
     return res == True
+
+#Verifica que el carton sea una matrix de 3 x 9
+def matrix_tres_nueve(carton):
+    res = True
+    cantc = 0
+    for fila in carton:
+        cantc += 1
+        cantf = len(fila)
+        if (cantf != 9):
+            res = False
+    if (cantc != 3):
+        res = False
+    return res == True  
