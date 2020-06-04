@@ -1,0 +1,4 @@
+{
+  "tests/test_celdas.py::test_celda_por_columna": true,
+  "tests/test_celdas.py::test_celdas_por_columna": true
+}
