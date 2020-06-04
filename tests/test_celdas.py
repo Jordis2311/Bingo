@@ -11,6 +11,7 @@ from src.bingo import no_repite_elementos
 from src.bingo import columnas_no_completas
 from src.bingo import cinco_celdas_por_fila
 from src.bingo import dos_celdas_ocupadas
+from src.bingo import dos_celdas_vacias
 
 #Revisar si la funcion que valida que el carton tiene 15 celdas ocupadas funciona correctamente
 def test_celdas_15():
@@ -111,3 +112,13 @@ def test_celdas_ocupadas_seguidas():
     (1,1,0,1,1,0,1,0,1)
     )
     assert dos_celdas_ocupadas(mi_carton) == True
+
+
+#Verifica que la funcion que revisa si un carton tiene cumple con la condicion de celdas vacias seguidas
+def test_celdas_vacias_seguidas():
+    mi_carton = (
+    (1,1,0,1,0,0,1,0,1),
+    (0,0,1,0,1,1,0,1,0),
+    (1,1,0,1,1,0,1,0,1)
+    )
+    assert dos_celdas_vacias(mi_carton) == True
