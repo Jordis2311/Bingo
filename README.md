@@ -4,4 +4,8 @@
 Generador de cartones de bingo automatico
 Alumno: Jordi Solá
 
-El 
+Este repositorio contiene el archivo "Carton.py" dentro de la carpeta src que al ser ejecutado devolvera un carton de bingo valido por pantalla en un formato de 3 filas y 9 columnas.
+
+Esto se logra mediante la funcion genera_carton, la cual ejecuta repetidamente un generador de cartones aleatorio llamado intentoCarton que pasa por una serie de verificaciones de validez que se ejecutan dentro de otra funcion llamada "testeo" hasta encontrar un carton que cumpla con todas las condiciones de validez.
+
+Estas validaciones se encuentra en el archivo "bingo.py", tambien dentro de la carpeta src, donde se encuentran funciones para cada condicion a verificar. A todas estas funciones se les verifica su funcionalidad con la ejecucion de multiples tests ubicados en "test_celdas.py" y "test_1_a_90.py" dentro de la carpeta "tests", estos tests se ejecutan gracias a la funcion pytest, que es utilizada cada vez que se hace un commit en este repositorio
