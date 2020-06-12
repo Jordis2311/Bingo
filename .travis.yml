@@ -2,6 +2,8 @@ language: python
 python:
   - "3.8.2"
 cache: pip
-
+install: 
+  -pip install pytest
+  -pip install python-coveralls
 script:
   - pytest
