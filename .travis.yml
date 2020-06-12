@@ -4,7 +4,9 @@ python:
   - "3.8"
 cache: pip
 install: 
-  -pip install pytest pytest-cov python-coveralls
+  - pip install pytest
+  - pip install pytest-cov
+  - pip install python-coveralls
 script:
   - pytest --cov=src
 after_success: coveralls
