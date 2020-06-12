@@ -161,3 +161,22 @@ def matrix_tres_nueve(carton):
     if (cantc != 3):
         res = False
     return res == True  
+
+#Verifica que el carton tenga 3 y solo 3 columnas con una celda ocupada
+def tres_columna_una(carton):
+    res = True
+    cn = 0
+    for i in range (0,9):
+        (c1,c2,c3) = columna(carton,i)
+        ct = 0
+        if (c1 != 0):
+            ct += 1
+        if (c2 != 0):
+            ct += 1
+        if (c3 != 0):
+            ct += 1
+        if (ct == 1):
+            cn += 1
+    if (cn != 3):
+        res = False
+    return res == True

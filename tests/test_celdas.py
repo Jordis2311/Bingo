@@ -13,6 +13,7 @@ from src.bingo import cinco_celdas_por_fila
 from src.bingo import dos_celdas_ocupadas
 from src.bingo import dos_celdas_vacias
 from src.bingo import matrix_tres_nueve
+from src.bingo import tres_columna_una
 
 #Revisar si la funcion que valida que el carton tiene 15 celdas ocupadas funciona correctamente
 def test_celdas_15():
@@ -131,3 +132,11 @@ def test_matrix():
     (1,1,0,1,1,0,1,0,1)
     )
     assert matrix_tres_nueve(mi_carton) == True
+
+def test_tres_columnas():
+    mi_carton = (
+    (1,11,0,31,0,0,61,0,81),
+    (0,0,22,0,42,52,0,72,0),
+    (3,13,0,33,43,0,62,0,83)
+    )
+    assert tres_columna_una(mi_carton) == True
