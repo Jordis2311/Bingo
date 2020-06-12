@@ -5,4 +5,3 @@ cache: pip
 
 script:
   - pytest
-  - python src/Carton.py
