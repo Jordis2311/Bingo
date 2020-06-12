@@ -1,9 +1,10 @@
+sudo: false
 language: python
 python:
   - "3.8.2"
 cache: pip
 install: 
-  -pip install pytest
-  -pip install python-coveralls
+  -pip install pytest pytest-cov python-coveralls
 script:
-  - pytest
+  - pytest-cov
+after_success: coveralls
