@@ -8,4 +8,4 @@ install:
   - pip install python-coveralls
 script:
   - pytest --cov=src/
-after-success: coveralls
+after_success: coveralls
