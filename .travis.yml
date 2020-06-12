@@ -2,7 +2,6 @@ sudo: false
 language: python
 python:
   - "3.8"
-cache: pip
 install: 
   - pip install pytest
   - pip install pytest-cov
