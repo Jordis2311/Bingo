@@ -104,46 +104,10 @@ def transformar(carton):
 
 def testeo(c):
     res = True
-    if(validar_quince_celdas(c) != True):
-        res = False
-        return res
-    if(validar_no_mayor_quince(c) != True):
-        res = False
-        return res
-    if(validar_no_menor_quince(c) != True):
-        res = False
-        return res
-    if(todas_columnas_con_numeros(c) != True):
-        res = False
-        return res
-    if(todas_filas_con_numeros(c) != True):
-        res = False
-        return res
-    if(incremento_columna(c) != True):
-        res = False
-        return res
-    if(incremento_fila(c) != True):
-        res = False
-        return res
-    if(no_repite_elementos(c) != True):
-        res = False
-        return res
-    if(columnas_no_completas(c) != True):
-        res = False
-        return res
-    if(cinco_celdas_por_fila(c) != True):
-        res = False
-        return res
-    if(dos_celdas_ocupadas(c) != True):
-        res = False
-        return res
-    if(dos_celdas_vacias(c) != True):
-        res = False
-        return res
-    if(matrix_tres_nueve(c) != True):
-        res = False
-        return res
-    if(tres_columna_una(c) != True):
+    if((validar_quince_celdas(c) != True) or (validar_no_mayor_quince(c) != True) or (validar_no_menor_quince(c) != True) or (todas_columnas_con_numeros(c) != True)
+    or (todas_filas_con_numeros(c) != True) or (incremento_columna(c) != True) or (incremento_fila(c) != True) or (no_repite_elementos(c) != True)
+    or (columnas_no_completas(c) != True) or (cinco_celdas_por_fila(c) != True) or (dos_celdas_ocupadas(c) != True) or (dos_celdas_vacias(c) != True)
+    or (matrix_tres_nueve(c) != True) or (tres_columna_una(c) != True)):
         res = False
         return res
     return res
