@@ -269,11 +269,7 @@ def test_tranformar():
       [0,1,0],
       [1,0,0]
     ]
-    nuevo = [
-    [1,0,0,0,1,0,0,0,1],
-    [0,1,0,1,0,1,0,1,0],
-    [0,0,1,0,0,0,1,0,0]
-    ]
+    nuevo = transformar(mi_carton)
     for i in range (0,3):
         for x in range (0,9):
             assert nuevo[i][x] == mi_carton[x][i]
