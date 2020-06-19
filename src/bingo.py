@@ -3,7 +3,7 @@
 # Los 1 son celdas Ocupadas
 
 #Define un carton
-def carton():
+def cartonero():
     carton = (
         (1,1,0,1,0,1,0,1,1),
         (1,0,1,0,1,0,1,0,0),
@@ -180,3 +180,35 @@ def tres_columna_una(carton):
     if (cn != 3):
         res = False
     return res == True
+
+#Revisar si los numeros del carton estan entre 1 y 90
+def uno_a_noventa(mi_carton):
+    res = True
+    for fila in range(0, 3):
+        for columna in range (0,9):
+            celda = mi_carton[fila][columna]
+            if (celda < 0 or celda > 90):
+                res = False
+    return res == True
+
+#Verifica que el carton cumpla con todas las reglamentaciones del bingo
+def testing(carton):
+    res = True
+    if((validar_quince_celdas(carton) != True) or (validar_no_mayor_quince(carton) != True) or (validar_no_menor_quince(carton) != True) or (todas_columnas_con_numeros(carton) != True)
+    or (todas_filas_con_numeros(carton) != True) or (incremento_columna(carton) != True) or (incremento_fila(carton) != True) or (no_repite_elementos(carton) != True)
+    or (columnas_no_completas(carton) != True) or (cinco_celdas_por_fila(carton) != True) or (dos_celdas_ocupadas(carton) != True) or (dos_celdas_vacias(carton) != True)
+    or (matrix_tres_nueve(carton) != True) or (tres_columna_una(carton) != True) or (uno_a_noventa(carton) != True)):
+        res = False
+    return res
+
+#Cambia el formato de un carton a el formato usado en las validaciones de cartones
+def transformar(carton):
+    nuevo = [
+    [0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0]
+    ]
+    for i in range (0,3):
+        for x in range (0,9):
+            nuevo[i][x] = carton[x][i]
+    return nuevo

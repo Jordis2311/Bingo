@@ -1,21 +1,10 @@
 import random
 import math
 
-from bingo import validar_quince_celdas
-from bingo import validar_no_mayor_quince
-from bingo import validar_no_menor_quince
-from bingo import todas_columnas_con_numeros
-from bingo import todas_filas_con_numeros
-from bingo import incremento_columna
-from bingo import incremento_fila
-from bingo import no_repite_elementos
-from bingo import columnas_no_completas
-from bingo import cinco_celdas_por_fila
-from bingo import dos_celdas_ocupadas
-from bingo import dos_celdas_vacias
-from bingo import matrix_tres_nueve
-from bingo import tres_columna_una
+from bingo import testing
+from bingo import transformar
 
+#Crea un carton de bingo en un formato de 9 filas 3 columnas que no esta garantizado cumplir con el reglamento del juego
 def intentoCarton():
     contador = 0
 
@@ -83,6 +72,7 @@ def intentoCarton():
 
     return carton
 
+#Muestra un carton
 def imprimirCarton(carton):
     print ("\n")
     for columna in range (0,3):
@@ -91,35 +81,17 @@ def imprimirCarton(carton):
         print ("\n")
     print("\n")
 
-def transformar(carton):
-    nuevo = [
-    [0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0]
-    ]
-    for i in range (0,3):
-        for x in range (0,9):
-            nuevo[i][x] = carton[x][i]
-    return nuevo
 
-def testeo(c):
-    res = True
-    if((validar_quince_celdas(c) != True) or (validar_no_mayor_quince(c) != True) or (validar_no_menor_quince(c) != True) or (todas_columnas_con_numeros(c) != True)
-    or (todas_filas_con_numeros(c) != True) or (incremento_columna(c) != True) or (incremento_fila(c) != True) or (no_repite_elementos(c) != True)
-    or (columnas_no_completas(c) != True) or (cinco_celdas_por_fila(c) != True) or (dos_celdas_ocupadas(c) != True) or (dos_celdas_vacias(c) != True)
-    or (matrix_tres_nueve(c) != True) or (tres_columna_una(c) != True)):
-        res = False
-        return res
-    return res
-
+#Crea Cartones de bingo hasta que encuentre uno que cumpla con todas las reglamentaciones del bingo y lo devuelve
 def generar_carton():
     while True:
         c = intentoCarton()
         n = transformar(c)
-        if (testeo(n) == True):
+        if (testing(n) == True):
             break
     return c
 
+#Crea y muestra un carton valido
 def main():
     imprimirCarton(generar_carton())
 

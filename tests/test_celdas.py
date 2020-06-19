@@ -1,4 +1,4 @@
-from src.bingo import carton
+from src.bingo import cartonero
 from src.bingo import columna
 from src.bingo import validar_quince_celdas
 from src.bingo import validar_no_mayor_quince
@@ -14,6 +14,10 @@ from src.bingo import dos_celdas_ocupadas
 from src.bingo import dos_celdas_vacias
 from src.bingo import matrix_tres_nueve
 from src.bingo import tres_columna_una
+from src.bingo import uno_a_noventa
+from src.bingo import testing
+from src.bingo import transformar
+
 
 #Revisar si la funcion que valida que el carton tiene 15 celdas ocupadas funciona correctamente
 def test_celdas_15():
@@ -225,3 +229,52 @@ def test_tres_columnas():
     (3,13,0,33,43,0,62,0,0)
     )
     assert tres_columna_una(mi_carton) == False
+
+def test_uno_a_noventa():
+    mi_carton = (
+    (1,11,0,31,0,0,61,0,81),
+    (0,0,22,0,42,52,0,72,0),
+    (3,13,0,33,43,0,62,0,83)
+    )
+    assert uno_a_noventa(mi_carton) == True
+    mi_carton = (
+    (-10,11,0,31,41,0,61,0,202),
+    (0,0,22,0,42,99,0,72,0),
+    (3,13,0,-45,43,0,62,0,33)
+    )
+    assert uno_a_noventa(mi_carton) == False
+
+def test_testeo():
+    mi_carton = (
+    (0,0,23,32,0,56,0,72,80),
+    (0,10,28,0,0,58,0,79,82),
+    (7,11,0,39,41,0,60,0,0)
+    )
+    assert testing(mi_carton) == True
+    mi_carton = (
+    (-10,11,0,31,41,0,61,0,202),
+    (0,0,22,0,42,99,0,72,0),
+    (3,13,0,-45,43,0,62,0,33)
+    )
+    assert testing(mi_carton) == False
+
+def test_tranformar():
+    mi_carton = [
+      [1,0,0],
+      [0,1,0],
+      [0,0,1],
+      [0,1,0],
+      [1,0,0],
+      [0,1,0],
+      [0,0,1],
+      [0,1,0],
+      [1,0,0]
+    ]
+    nuevo = [
+    [1,0,0,0,1,0,0,0,1],
+    [0,1,0,1,0,1,0,1,0],
+    [0,0,1,0,0,0,1,0,0]
+    ]
+    for i in range (0,3):
+        for x in range (0,9):
+            assert nuevo[i][x] == mi_carton[x][i]
