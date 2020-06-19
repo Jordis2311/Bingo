@@ -1,4 +1,3 @@
-from src.bingo import cartonero
 from src.bingo import columna
 from src.bingo import validar_quince_celdas
 from src.bingo import validar_no_mayor_quince

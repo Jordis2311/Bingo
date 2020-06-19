@@ -2,14 +2,6 @@
 # Los 0 son celdas vacias
 # Los 1 son celdas Ocupadas
 
-#Define un carton
-def cartonero():
-    carton = (
-        (1,1,0,1,0,1,0,1,1),
-        (1,0,1,0,1,0,1,0,0),
-        (0,1,1,0,0,1,0,1,1)
-    )
-    return carton
 
 #Devuelve una columna del carton
 def columna(carton, nro_columna):
