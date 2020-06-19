@@ -1,7 +1,7 @@
 import random
 import math
 
-from bingo import testing
+from bingo import prueba
 from bingo import transformar
 
 #Crea un carton de bingo en un formato de 9 filas 3 columnas que no esta garantizado cumplir con el reglamento del juego
@@ -87,7 +87,7 @@ def generar_carton():
     while True:
         c = intentoCarton()
         n = transformar(c)
-        if (testing(n) == True):
+        if (prueba(n) == True):
             break
     return c
 

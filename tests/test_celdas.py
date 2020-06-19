@@ -15,7 +15,7 @@ from src.bingo import dos_celdas_vacias
 from src.bingo import matrix_tres_nueve
 from src.bingo import tres_columna_una
 from src.bingo import uno_a_noventa
-from src.bingo import testing
+from src.bingo import prueba
 from src.bingo import transformar
 
 
@@ -250,13 +250,13 @@ def test_testeo():
     (0,10,28,0,0,58,0,79,82),
     (7,11,0,39,41,0,60,0,0)
     )
-    assert testing(mi_carton) == True
+    assert prueba(mi_carton) == True
     mi_carton = (
     (-10,11,0,31,41,0,61,0,202),
     (0,0,22,0,42,99,0,72,0),
     (3,13,0,-45,43,0,62,0,33)
     )
-    assert testing(mi_carton) == False
+    assert prueba(mi_carton) == False
 
 def test_tranformar():
     mi_carton = [

@@ -192,7 +192,7 @@ def uno_a_noventa(mi_carton):
     return res == True
 
 #Verifica que el carton cumpla con todas las reglamentaciones del bingo
-def testing(carton):
+def prueba(carton):
     res = True
     if((validar_quince_celdas(carton) != True) or (validar_no_mayor_quince(carton) != True) or (validar_no_menor_quince(carton) != True) or (todas_columnas_con_numeros(carton) != True)
     or (todas_filas_con_numeros(carton) != True) or (incremento_columna(carton) != True) or (incremento_fila(carton) != True) or (no_repite_elementos(carton) != True)
