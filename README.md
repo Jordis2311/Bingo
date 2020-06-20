@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/Jordis2311/Bingo.svg?branch=master)](https://travis-ci.org/Jordis2311/Bingo)[![Coverage Status](https://coveralls.io/repos/github/Jordis2311/Bingo/badge.svg)](https://coveralls.io/github/Jordis2311/Bingo)
-
-# Generaodor de cartones de bingo
+[![Build Status](https://travis-ci.org/Jordis2311/Bingo.svg?branch=master)](https://travis-ci.org/Jordis2311/Bingo)
+[![Coverage Status](https://coveralls.io/repos/github/Jordis2311/Bingo/badge.svg?branch=master)](https://coveralls.io/github/Jordis2311/Bingo?branch=master)
+# Generador de cartones de bingo
 Proyecto para la materia de AAT de 6to Año Informatica del Instituto Politecnico Superior
 Alumno: Jordi Solá
 Profesor: Mariano Dagostino
