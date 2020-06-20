@@ -12,4 +12,7 @@ El jugador que primero consiga completar una fila del carton sera el ganador
 
 # Descripcion del Repositorio
 
-Pendiente cambio
+Mi generador de cartones de bingo esta estructurado de la siguiente manera:
+la funcion que genera el codigo y todas las validaciones de condiciones del carton estan incluidas en el archivo bingo.py dentro de la carpeta src.
+Para obtener un carton lo que se debe hacer es ejecutar el archivo bingo.py, este devolvera en consola un carton de bingo que se podra utilizar para el juego.
+Las funciones de este repositorio pasan un proceso de comprobacion para regular que esten funcionando correctamente por las funciones "test" ubicadas todas en el archivo "test_celdas" dentro de la carpeta "tests" esta verificacion de funcionamiento es realizada cada vez que se realiza un cambio en el repositorio gracias a Travis CI el ejecuta el comando pytest en dichos momentos
