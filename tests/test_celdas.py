@@ -16,6 +16,9 @@ from src.bingo import tres_columna_una
 from src.bingo import uno_a_noventa
 from src.bingo import prueba
 from src.bingo import transformar
+from src.bingo import intentoCarton
+from src.bingo import generar_carton
+from src.bingo import imprimirCarton
 
 
 #Revisar si la funcion que valida que el carton tiene 15 celdas ocupadas funciona correctamente
@@ -273,3 +276,8 @@ def test_tranformar():
     for i in range (0,3):
         for x in range (0,9):
             assert nuevo[i][x] == mi_carton[x][i]
+
+def test_intento():
+    carton = intentoCarton()
+    n = transformar(carton)
+    assert matrix_tres_nueve(n) == True
