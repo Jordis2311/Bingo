@@ -281,3 +281,7 @@ def test_intento():
     carton = intentoCarton()
     n = transformar(carton)
     assert matrix_tres_nueve(n) == True
+
+def test_generador():
+    carton = generar_carton()
+    assert prueba(carton) == True

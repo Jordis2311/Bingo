@@ -277,9 +277,9 @@ def intentoCarton():
 #Muestra un carton
 def imprimirCarton(carton):
     print ("\n")
-    for columna in range (0,3):
-        for fila in range (0,9):
-            print(carton[fila][columna], end = ' ')
+    for fila in carton:
+        for celda in fila:
+            print(celda, end = ' ')
         print ("\n")
     print("\n")
 
@@ -291,4 +291,11 @@ def generar_carton():
         n = transformar(c)
         if (prueba(n) == True):
             break
-    return c
+    return n
+
+#Crea y muestra un carton valido
+def main():
+    imprimirCarton(generar_carton())
+
+if (__name__ == "__main__"):
+    main()
