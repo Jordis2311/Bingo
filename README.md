@@ -17,5 +17,18 @@ la funcion que genera el codigo y todas las validaciones de condiciones del cart
 Para obtener un carton lo que se debe hacer es ejecutar el archivo bingo.py, este devolvera en consola un carton de bingo que se podra utilizar para el juego.
 Las funciones de este repositorio pasan un proceso de comprobacion para regular que esten funcionando correctamente por las funciones "test" ubicadas todas en el archivo "test_celdas" dentro de la carpeta "tests" esta verificacion de funcionamiento es realizada cada vez que se realiza un cambio en el repositorio gracias a Travis CI el ejecuta el comando pytest en dichos momentos
 
+# Uso
+```python src/bingo.py```
+# Resultado
+```
+$ python3 src/bingo.py
+2  0  20 0  0  54 0  74 82
+
+8  0  27 34 0  56 0  79 0
+
+0  18 0  39 41 0  65 0  83
+```
+
+
 # Licencia
 Este repositorio esta bajo la licencia GNU GLP v3, para más informacion leer dicha licencia
