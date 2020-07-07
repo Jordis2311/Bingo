@@ -17,9 +17,22 @@ la funcion que genera el codigo y todas las validaciones de condiciones del cart
 Para obtener un carton lo que se debe hacer es ejecutar el archivo bingo.py, este devolvera en consola un carton de bingo que se podra utilizar para el juego.
 Las funciones de este repositorio pasan un proceso de comprobacion para regular que esten funcionando correctamente por las funciones "test" ubicadas todas en el archivo "test_celdas" dentro de la carpeta "tests" esta verificacion de funcionamiento es realizada cada vez que se realiza un cambio en el repositorio gracias a Travis CI el ejecuta el comando pytest en dichos momentos
 
+# Descargar
+Para clonar mi repositorio ingresa en tu terminal
+```https://github.com/Jordis2311/Bingo.git```
+Para utilizar este repositorio es necesario tener instalador Python, pip y Jinja2
+Link de la pagina de `Python`:
+```https://www.python.org/downloads/```
+Guia de como Instalar `pip`:
+```https://www.liquidweb.com/kb/install-pip-windows/```
+Para instalar `jinja2`:
+```pip install jinja2```
+Para distribuciones basadas en Debian utilizar `pip3`
+
 # Uso
+Para generar un carton:
 ```python src/bingo.py```
-# Resultado
+Ejemplo:
 ```
 $ python3 src/bingo.py
 2  0  20 0  0  54 0  74 82
@@ -28,7 +41,12 @@ $ python3 src/bingo.py
 
 0  18 0  39 41 0  65 0  83
 ```
-
+Para generar un html del carton:
+```python Bingoweb.py```
+Ejemplo:
+Generado "bingo.html".
+```
+![Ejemplo Bingo Web](https://github.com/Jordis2311/Bingo/blob/master/Ejemplo%20Carton.PNG?raw=true)
 
 # Licencia
 Este repositorio esta bajo la licencia GNU GLP v3, para más informacion leer dicha licencia
