@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Carton de Bingo Generado</title>
+    <meta charset="UTF-8">
+</head>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #9765b6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.tabla {
+    margin: 2em;
+    border: 10px solid white;
+    display: flex;
+    flex-direction: column;
+}
+
+.fila {
+    display: flex;
+    border: 3px solid white;
+}
+
+.fila > div {
+    border: 5px solid white;
+    width: 4em;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+.celda {
+    background: #7b37a3;
+    color: black;
+}
+
+.vacia {
+    background: #300046
+}
+</style>
+
+<body>
+    <div class="tabla">
+        {% for fila in carton %}
+        <div class="fila">
+            {% for celda in fila %}
+            {% if celda == 0 %}
+            <div class="vacia">
+            </div>
+            {% else %}
+            <div class="celda">
+                {{ celda }}
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
