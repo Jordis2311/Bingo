@@ -31,7 +31,9 @@ Para distribuciones basadas en Debian utilizar `pip3`
 
 # Uso
 Para generar un carton:
+
 ```python src/bingo.py```
+
 Ejemplo:
 ```
 $ python3 src/bingo.py
@@ -43,6 +45,7 @@ $ python3 src/bingo.py
 ```
 
 Para generar un html del carton:
+
 ```python Bingoweb.py```
 
 Ejemplo:
