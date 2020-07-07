@@ -45,7 +45,6 @@ Para generar un html del carton:
 ```python Bingoweb.py```
 Ejemplo:
 Generado "bingo.html".
-```
 ![Ejemplo Bingo Web](https://github.com/Jordis2311/Bingo/blob/master/Ejemplo%20Carton.PNG?raw=true)
 
 # Licencia
