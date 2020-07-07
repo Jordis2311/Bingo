@@ -19,14 +19,23 @@ Las funciones de este repositorio pasan un proceso de comprobacion para regular 
 
 # Descargar
 Para clonar mi repositorio ingresa en tu terminal
+
 ```https://github.com/Jordis2311/Bingo.git```
+
 Para utilizar este repositorio es necesario tener instalador Python, pip y Jinja2
+
 Link de la pagina de `Python`:
+
 ```https://www.python.org/downloads/```
+
 Guia de como Instalar `pip`:
+
 ```https://www.liquidweb.com/kb/install-pip-windows/```
+
 Para instalar `jinja2`:
+
 ```pip install jinja2```
+
 Para distribuciones basadas en Debian utilizar `pip3`
 
 # Uso
